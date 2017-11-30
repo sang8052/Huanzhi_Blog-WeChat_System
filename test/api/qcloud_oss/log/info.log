@@ -1,0 +1,64 @@
+2017-11-26 07:20:54 [ERROR] [pool-2-thread-1:0] [com.qcloud.cos_sync_tools_xml.UploadFileTask:] [UploadFileTask.java:97] 
+ [fail] [localpath: E:\项目\PHP\wechat\点名系统\api\cos_sync\..\src\backgroud_01.jpg] [cosPath: /src/backgroud_01.jpg] [length: 85332] [Exception: com.qcloud.cos.exception.CosServiceException: The specified bucket does not exist. (Status Code: 404; Error Code: NoSuchBucket; Request ID: NWExOWZhZDVfMjlhZDM1MGFfMmUxZDFfMmYyZTk4); Trace ID: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTczMmZiNDZmZjBmNTVjMGU4NTViNDhhYWVjNzNkNzI4Y2U1MDgwOTRhNGRkODRlYzNhNjdiYjZkNzIxYzUzZjU=]
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:46] 
+ 
+
+sync over! op statistics:
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:49] 
+                      op_status : ALL_FAIL
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:52] 
+                 upload_file_ok : 0
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:55] 
+               upload_file_fail : 1
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:58] 
+               upload_file_skip : 0
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:62] 
+                     start_time : 2017-11-26 07:20:48
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:66] 
+                       end_time : 2017-11-26 07:20:54
+2017-11-26 07:20:54 [INFO ] [main:0] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:70] 
+                      used_time : 5 s
+2017-11-26 07:21:38 [ERROR] [pool-2-thread-1:0] [com.qcloud.cos_sync_tools_xml.UploadFileTask:] [UploadFileTask.java:97] 
+ [fail] [localpath: E:\项目\PHP\wechat\点名系统\api\cos_sync\..\src\123.txt] [cosPath: /src/123.txt] [length: 0] [Exception: com.qcloud.cos.exception.CosServiceException: The specified bucket does not exist. (Status Code: 404; Error Code: NoSuchBucket; Request ID: NWExOWZiMDJfNmNhZDM1MGFfODA2NV8yYzlhYjY=); Trace ID: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTczMmZiNDZmZjBmNTVjMGU4NTViNDhhYWVjNzNkNzI4Y2U1MDgwOTRhNGRkODRlYzNhNjdiYjZkNzIxYzUzZjU=]
+2017-11-26 07:21:40 [ERROR] [pool-2-thread-2:2047] [com.qcloud.cos_sync_tools_xml.UploadFileTask:] [UploadFileTask.java:97] 
+ [fail] [localpath: E:\项目\PHP\wechat\点名系统\api\cos_sync\..\src\backgroud_01.jpg] [cosPath: /src/backgroud_01.jpg] [length: 85332] [Exception: com.qcloud.cos.exception.CosServiceException: The specified bucket does not exist. (Status Code: 404; Error Code: NoSuchBucket; Request ID: NWExOWZiMDRfOTZhZDM1MGFfMjdiMTdfMmNlOTVi); Trace ID: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTczMmZiNDZmZjBmNTVjMGU4NTViNDhhYWVjNzNkNzI4Y2U1MDgwOTRhNGRkODRlYzNhNjdiYjZkNzIxYzUzZjU=]
+2017-11-26 07:21:40 [INFO ] [main:2047] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:46] 
+ 
+
+sync over! op statistics:
+2017-11-26 07:21:40 [INFO ] [main:2047] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:49] 
+                      op_status : ALL_FAIL
+2017-11-26 07:21:40 [INFO ] [main:2047] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:52] 
+                 upload_file_ok : 0
+2017-11-26 07:21:40 [INFO ] [main:2047] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:55] 
+               upload_file_fail : 2
+2017-11-26 07:21:40 [INFO ] [main:2047] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:58] 
+               upload_file_skip : 0
+2017-11-26 07:21:40 [INFO ] [main:2047] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:62] 
+                     start_time : 2017-11-26 07:21:35
+2017-11-26 07:21:40 [INFO ] [main:2063] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:66] 
+                       end_time : 2017-11-26 07:21:40
+2017-11-26 07:21:40 [INFO ] [main:2063] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:70] 
+                      used_time : 4 s
+2017-11-26 07:23:27 [ERROR] [pool-2-thread-1:0] [com.qcloud.cos_sync_tools_xml.UploadFileTask:] [UploadFileTask.java:97] 
+ [fail] [localpath: E:\项目\PHP\wechat\点名系统\api\cos_sync\..\src\123.txt] [cosPath: /src# æ¯å¦ä½¿ç¨HTTPSä¼ è¾(ä¼ è¾éåº¦è¾æ¢ï¼éç¨äºå¯¹ä¼ è¾å®å¨è¦æ±é«çåºæ¯), 1å¼å¯, 0å³é­/123.txt] [length: 0] [Exception: com.qcloud.cos.exception.CosServiceException: The specified bucket does not exist. (Status Code: 404; Error Code: NoSuchBucket; Request ID: NWExOWZiNmZfNTJhZTM1MGFfNDEyXzJjMGYxNA==); Trace ID: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTczMmZiNDZmZjBmNTVjMGU4NTViNDhhYWVjNzNkNzI4Y2U1MDgwOTRhNGRkODRlYzNhNjdiYjZkNzIxYzUzZjU=]
+2017-11-26 07:23:28 [ERROR] [pool-2-thread-2:1437] [com.qcloud.cos_sync_tools_xml.UploadFileTask:] [UploadFileTask.java:97] 
+ [fail] [localpath: E:\项目\PHP\wechat\点名系统\api\cos_sync\..\src\backgroud_01.jpg] [cosPath: /src# æ¯å¦ä½¿ç¨HTTPSä¼ è¾(ä¼ è¾éåº¦è¾æ¢ï¼éç¨äºå¯¹ä¼ è¾å®å¨è¦æ±é«çåºæ¯), 1å¼å¯, 0å³é­/backgroud_01.jpg] [length: 85332] [Exception: com.qcloud.cos.exception.CosServiceException: The specified bucket does not exist. (Status Code: 404; Error Code: NoSuchBucket; Request ID: NWExOWZiNzBfZDRiMDM1MGFfOGY1Zl8yZjNkMTU=); Trace ID: OGVmYzZiMmQzYjA2OWNhODk0NTRkMTBiOWVmMDAxODc0OWRkZjk0ZDM1NmI1M2E2MTRlY2MzZDhmNmI5MWI1OTczMmZiNDZmZjBmNTVjMGU4NTViNDhhYWVjNzNkNzI4Y2U1MDgwOTRhNGRkODRlYzNhNjdiYjZkNzIxYzUzZjU=]
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:46] 
+ 
+
+sync over! op statistics:
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:49] 
+                      op_status : ALL_FAIL
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:52] 
+                 upload_file_ok : 0
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:55] 
+               upload_file_fail : 2
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:58] 
+               upload_file_skip : 0
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:62] 
+                     start_time : 2017-11-26 07:23:24
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:66] 
+                       end_time : 2017-11-26 07:23:28
+2017-11-26 07:23:28 [INFO ] [main:1453] [com.qcloud.cos_sync_tools_xml.meta.TaskStatics:] [TaskStatics.java:70] 
+                      used_time : 4 s

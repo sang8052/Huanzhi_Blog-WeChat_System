@@ -1,0 +1,75 @@
+﻿# Host: wechat.szhcloud.top  (Version: 5.5.57-log)
+# Date: 2017-11-30 07:03:14
+# Generator: MySQL-Front 5.3  (Build 2.42)
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE */;
+/*!40101 SET SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES */;
+/*!40103 SET SQL_NOTES='ON' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS */;
+/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+
+DROP DATABASE IF EXISTS `wechat_szhcloud`;
+CREATE DATABASE `wechat_szhcloud` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `wechat_szhcloud`;
+
+#
+# Source for table "chats"
+#
+
+DROP TABLE IF EXISTS `chats`;
+CREATE TABLE `chats` (
+  `Id` int(10) NOT NULL AUTO_INCREMENT,
+  `asks` varchar(255) NOT NULL DEFAULT '',
+  `type` varchar(255) DEFAULT NULL,
+  `content` text,
+  `mediaid` varchar(255) DEFAULT NULL,
+  `tite` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `musicurl` varchar(255) DEFAULT NULL,
+  `hqmusicurl` varchar(255) DEFAULT NULL,
+  `articlecount` int(1) DEFAULT '1',
+  `picurl` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='自定义回复表';
+
+#
+# Data for table "chats"
+#
+
+/*!40000 ALTER TABLE `chats` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chats` ENABLE KEYS */;
+
+#
+# Source for table "SysInfo"
+#
+
+DROP TABLE IF EXISTS `SysInfo`;
+CREATE TABLE `SysInfo` (
+  `Id` int(5) NOT NULL AUTO_INCREMENT,
+  `keyword` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  `value2` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "SysInfo"
+#
+
+INSERT INTO `SysInfo` VALUES (1,'Version','1.0.0.2',NULL);
+
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
