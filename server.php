@@ -1,7 +1,7 @@
 
 <?php
 //服务端程序：V1.0.0.2
-//DEBUG版本：84
+//DEBUG版本：86
 //更新日志：
 //1.新增conf.php文件，配置信息全部转移到此文件中定义，避免了日后修改相关配置信息过于
 //麻烦的问题。
@@ -11,6 +11,9 @@
 //图灵机器人的API
 //4.代码结构优化。
 //5.token验证算法优化，解觉因为存在php缓冲区导致无法过token验证的问题
+
+//修正日志 修正因为Respond_news()函数在设计最初面向的是数组格式数据的问题
+          //修复因此导致的回复单条的news类型消息出错的bug
 
 	require_once("conf.php");
 	require_once("SQL_get.php");
@@ -82,7 +85,7 @@
             
             	$res->ResponseData=$res->Echo_TULIN($keyword,$res->ResponseData);//调用图灵api
             	
-            	//print_r($res->ResponseData);
+            	print_r($res->ResponseData);
             	if($res->ResponseData['type']=='text')
             	$res->Response_text($res->ResponseData);
             	if($res->ResponseData['type']=='image')
@@ -212,6 +215,21 @@
              $data_get=$this->Check_Chats($keyword);  //匹配数据库，寻找回答
              if($data_get['type']!=null||$data_get['type']!='')
              {
+             	if($data_get['type']=='news')
+             	{
+               $ResponseData['bool']='true';
+             	$ResponseData['type']='news';
+             	$ResponseData['ArticleCount']=1;
+             	$ResponseData['title'][0]=$data_get['title'];
+             	$ResponseData['Description'][0]=$data_get['description'];
+             	if(COS_SERVER=="COS")
+             	$ResponseData['PicUrl'][0]=COS_URL."img/tulin_url.jpg";
+             	if(COS_SERVER=="SERVER")
+             	$ResponseData['PicUrl'][0]=SERVER_URL."img/tulin_url.jpg";
+                $ResponseData['Url'][0]=$data_get['url'];
+             	}
+             	else
+             	{
              $ResponseData['bool']='true';
              $ResponseData['type']=$data_get['type'];
              $ResponseData['Content']=$data_get['content'];
@@ -223,6 +241,8 @@
              $ResponseData['ArticleCount']=$data_get['articlecount'];
              $ResponseData['PicUrl']=$data_get['picurl'];
              $ResponseData['Url']=$data_get['url'];
+             	}
+            
             }
            
           } 
@@ -246,7 +266,7 @@
              $data_tulin['userid']=$userid;
              $method="post";
              $data_tulin_get=self::JSON_get_post( $data_tulin_url, $data_tulin, $method);
-             print_r($data_tulin_get);
+             //print_r($data_tulin_get);
              if( $data_tulin_get['code']=='100000')
              {
              	//echo "tulin回复文本消息"; 
