@@ -89,12 +89,21 @@ function UploadPic()
         'secretId'    => COS_SECRETID,
         'secretKey' => COS_SECRETKEY)));
 	$TempFile="/www/wwwroot/tempfile/".$_FILES['pic']['name'];
-        //创建图像资源，以jpeg格式为例
-        $source = imagecreatefromjpeg($_FILES['pic']['tmp_name']);
-        //使用imagerotate()函数按指定的角度旋转
-        $rotate = imagerotate($source, $degrees, 0);
-        //旋转后的图片保存
-        imagejpeg($rotate,$TempFile);
+    $POST['pic']=$_FILES['pic']['tmp_name'];
+	copy($POST['pic'], $TempFile);
+	$exif = exif_read_data($TempFile);
+	if($exif['Orientation']==8)
+	$degrees=90;
+	if($exif['Orientation']==3)
+	$degrees=180;
+	if($exif['Orientation']==6)
+	$degrees=270;
+    //创建图像资源，以jpeg格式为例
+    $source = imagecreatefromjpeg($TempFile);
+    //使用imagerotate()函数按指定的角度旋转
+    $rotate = imagerotate($source, $degrees, 0);
+    //旋转后的图片保存
+    imagejpeg($rotate,$TempFile);
    $File_Type=substr(strrchr($_FILES['pic']['name'], '.'), 1);
    $Now_Time=date('Y-m-d H:i:s');
    $Cos_Filename="/PeopleInformation/Pic_Upload/".md5($_FILES['pic']['name'].$Now_Time).".".$File_Type;
@@ -107,8 +116,8 @@ function UploadPic()
     } 
     catch (\Exception $e) {echo "$e\n"; return FALSE;}
 	$result = @unlink ($TempFile); 
-    
-	 return $Cos_Filename;
+     $Cos_FileUrl=$Cos_Filename."?imageMogr2/auto-orient";
+	 return $Cos_FileUrl;
 }
 
 function UserData_SetPeopleInformation($userid,$username,$usersex,$picurl)

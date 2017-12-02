@@ -54,10 +54,9 @@ $FIEL_URL=SERVER_URL;
                 所编译的一套图形识别系统。利用本系统，可以实现在一定条件下的身份效验功能。</p>
         <p style="color: #F5F5F5; font-size: small;"> 目前，此系统还在开发实践阶段，您可以访问<a href="https://cloud.tencent.com/act/event/ci_demo.html">腾讯云（qcloud）关于智能AI部分的技术文档及页面</a>，来
                了解更多本系统所可能采用的技术指标。</p>
-        <p style="color: #F5F5F5; font-size: small;" align="center"><a href="Form_Get_PeopleInformation.php?userid=<?php echo $_GET['userid']?>"><button type="button"  name="AddPeopleInformation" class="am-btn am-btn-success am-round am-btn-sm" size="15"/>添加人脸</button></a></p>
-        <p style="color: #F5F5F5; font-size: small;" align="center"><a href="From_Check_PeopleInformation.php?userid=<?php echo $_GET['userid']?>"><button type="button"  name="CheckPeopleFace" class="am-btn am-btn-warning am-round am-btn-sm"  size="15" />人脸识别</button></a></p>
-        <p style="color: #F5F5F5; font-size: small;" align="right">2017.12.1</p>
-        <p style="color: #F5F5F5; font-size: small;" align="right">MR_SZH</p>
+        <p style="color: #F5F5F5; font-size: small;" align="center"><a href="Form_Get_PeopleInformation.php?userid=<?php echo $_GET['userid']?>"><button type="button"  name="AddPeopleInformation" class="am-btn am-btn-success am-round am-btn-sm" size="15"/>添加人脸</button></a>
+       <a href="From_Check_PeopleInformation.php?userid=<?php echo $_GET['userid']?>"><button type="button"  name="CheckPeopleFace" class="am-btn am-btn-warning am-round am-btn-sm"  size="15" />人脸识别</button></a></p>
+        
         </td></tr></table>
    </div>
 
