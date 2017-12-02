@@ -4,6 +4,14 @@ if(COS_SERVER=="COS")
 $FIEL_URL=COS_URL;
 if(COS_SERVER=="SERVER")
 $FIEL_URL=SERVER_URL;
+
+if(!isset($_GET['userid']))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1001";} </script>';
+	echo $echo;
+
+}
+
 ?>
 <!doctype html>
 <html class="no-js">
@@ -13,7 +21,7 @@ $FIEL_URL=SERVER_URL;
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>寰智博客--人脸识别系统</title>
+  <title>寰智人脸识别系统_添加人脸</title>
 
   <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
@@ -39,23 +47,32 @@ $FIEL_URL=SERVER_URL;
 
   <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/amazeui.min.css">
   <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/app.css">
+  <style type="text/css">
+  *#web_content{color: #F5F5F5; font-size:medium;}
+  </style>
 </head>
 <body>
-    <audio src="<?php echo $FIEL_URL?>music/Akie-sentinel_class.mp3" autoplay="autoplay" loop="-1">WARNING:声音播放出错！</audio>
+   
 	<div id="web_bg" style="position:absolute; width:100%; height:100%; z-index:-1"> 
     <img style="position:fixed;" src="<?php echo $FIEL_URL?>img/backgroud_01.jpg" height="100%" width="100%" /> 
     </div>
     <div id="web_content" >
     	<table align="center"  width="90%" height="90%" border="0">
-        <caption align="top"> <p style="color:red; font-size: larger; text-align: center;">系统简介</p></caption> 
-        <tr align="top"><td>
-        <p style="color: #F5F5F5; font-size: small;"> 寰智人脸识别系统是基于腾讯的人脸识别（Facial Recognition）系统，结合寰智微信的实际情况，
-                所编译的一套图形识别系统。利用本系统，可以实现在一定条件下的身份效验功能。</p>
-        <p style="color: #F5F5F5; font-size: small;"> 目前，此系统还在开发实践阶段，您可以访问<a href="https://cloud.tencent.com/act/event/ci_demo.html">腾讯云（qcloud）关于智能AI部分的技术文档及页面</a>，来
-               了解更多本系统所可能采用的技术指标。</p>
-        <p style="color: #F5F5F5; font-size: small;">更多功能敬请期待...</p>
-        <p style="color: #F5F5F5; font-size: small;" align="right">2017.12.1</p>
-        <p style="color: #F5F5F5; font-size: small;" align="right">MR_SZH</p>
+    		 <caption align="top"> <p style="color:red; font-size: larger; text-align: center;">添加人脸</p></caption> 
+     <tr><td>
+	<form name="PeopleInformation" action="Run_Get_PeopleInformation.php"  method="post" enctype="multipart/form-data">
+    <table align="center" border="0" width="300">
+	<tr><td align="left"><div class="am-input-group"><span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span><input name="name"  type="text" class="am-form-field  am-round " size="10" placeholder="姓名" /></div> </td></tr>
+	<tr><td align="left"><div class="am-input-group"><input name="sex"  type="radio"  id="radio_sex" value="男"/> 男&nbsp;&nbsp;&nbsp;&nbsp;<input name="sex" type="radio"  id="radio_sex"  value="女"/>女</div></td></tr>
+	
+	<tr><td align="left">
+		 <div class="am-input-group"><span class="am-input-group-label"><i class="am-icon-file am-icon-fw"></i></span><input name="pic"  type="file"  class="am-form-field  am-round "size="10" /></div>
+		</td></tr>
+	<tr><td colspan="2">告知：本系统所收集的数据仅供后台工程师优化算法采用，后期可能会对接入课堂点名功能中，我们承诺对于所收集的个人信息将严格保密，为了保证算法的合理性和准确性，请务必准确填写个人信息。【相关信息一经录入，均不可更改】<br/>受光照，算法精度等诸多条件影响，人脸识别得出的数据不能保证绝对精准。</td></tr>
+	<tr><td align="center" ><input name="confirm"  type="checkbox" onclick="agree();" id="radio_confirm"/>我已阅读以上告示，同意收集信息并保证相关信息准确。(因为网络问题，图片上传需要一段时间，请不要重复刷新，以免造成数据异常！)</td</tr>
+	<tr><td align="center" > <button type="submit"  name="submit" class="am-btn am-btn-success am-round am-btn-sm"  disabled="disabled" id="button_submit"  />提交</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset"  name="reset" class="am-btn am-btn-warning am-round am-btn-sm"  id="button_reset"  />重置</buttonn></td</tr>
+  <input name="userid" type="hidden" value="<?php echo $_GET['userid']?>" />
+  </table></form>
         </td></tr></table>
    </div>
 
@@ -63,6 +80,7 @@ $FIEL_URL=SERVER_URL;
 <!--在这里编写你的代码-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
+<script src="<?php echo $FIEL_URL?>assets/js/select_check.js"></script>
 <script src="<?php echo $FIEL_URL?>assets/js/jquery-3.2.1.min.js"></script>
 <!--<![endif]-->
 <!--[if lte IE 8 ]>

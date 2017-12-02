@@ -23,6 +23,15 @@ Class Mysql_get
     }
     return $row;
    }
+   function Get_Result()
+   {
+   	
+   	$row = mysql_fetch_array($this->result);
+     
+     
+    
+    return $row;
+   }
 }
 
 

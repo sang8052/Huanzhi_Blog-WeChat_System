@@ -37,13 +37,17 @@ define(TULIN_APIKEY,"f8b5fe97efd246f28484f49359f9cd15");                //定义
 //-----------*********---------------------------
 
 //-----------腾讯COS存储系统配置-----------------------
-define(COS_SERVER,'COS');                                            //定义系统中使用的URL的地址是为直接访问COS（运行模式）【请注释下一行】
-//define(COS_SERVER,'SERVER');                                         //定义系统中使用的URL的地址是为直接访问服务器模式（测试模式）【请注释上一行】
-define(COS_URL,"http://oss.tencent.szhcloud.cn/");                   //定义COS服务器地址 
-define(SERVER_URL,"http://wechat.szhcloud.top/src/");                //定义服务器模式时的地址
+define(COS_SERVER,'COS');                                             //定义系统中使用的URL的地址是为直接访问COS（运行模式）【请注释下一行】
+//define(COS_SERVER,'SERVER');                                        //定义系统中使用的URL的地址是为直接访问服务器模式（测试模式）【请注释上一行】
+define(COS_URL,"http://oss.tencent.szhcloud.cn/WebSource/");          //定义COS服务器地址 (web资源)
+define(COS_YURL,"http://oss.tencent.szhcloud.cn");                    //定义COS服务器的域名地址
+define(SERVER_URL,"http://wechat.szhcloud.top/src/");                 //定义服务器模式时的地址
+define(COS_REGION,"ap-shanghai");                                    //定义COS资源桶的区域
+define(COS_NAME,"szhcloud");                                         //定义COS服务器的资源名
 define(COS_APPID,"1252411219");                                      //定义腾讯APPID
 define(COS_SECRETID,"AKIDzoQp0yhHcjcIl0qrTr1yiEXgcLq7M1e4");         //定义腾讯SECRETID
 define(COS_SECRETKEY,"JPIyRgiWAaqtjLkvtdATZSK0XrysZ3KN");            //定义腾讯SECRETKEY
+
 //-----------*********---------------------------
 
 //-----------百度智能定位-----------

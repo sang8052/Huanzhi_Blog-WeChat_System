@@ -1,19 +1,10 @@
 
 <?php
-//服务端程序：V1.0.0.2
-//DEBUG版本：86
+//服务端程序：V1.0.0.3
+//DEBUG版本：21
 //更新日志：
-//1.新增conf.php文件，配置信息全部转移到此文件中定义，避免了日后修改相关配置信息过于
-//麻烦的问题。
-//2.新增被动回复数据内容（目前可以回复 文本消息、图片消息、语音消息、视频消息、音乐消息、图文消息）
-//图片消息、语音消息、视频消息、 音乐消息 因为涉及素材id的原因，暂时没有写相关代码
-//3.修改原先数据库中找不到的回复返回文本"我还不是很智能，HMM，\n 暂时不知道如何回答你呢。"为调用
-//图灵机器人的API
-//4.代码结构优化。
-//5.token验证算法优化，解觉因为存在php缓冲区导致无法过token验证的问题
+//1.新增人脸识别模块。
 
-//修正日志 修正因为Respond_news()函数在设计最初面向的是数组格式数据的问题
-          //修复因此导致的回复单条的news类型消息出错的bug
 
 	require_once("conf.php");
 	require_once("SQL_get.php");
@@ -213,6 +204,7 @@
      	if(  $ResponseData['bool']!='true')
           {
              $data_get=$this->Check_Chats($keyword);  //匹配数据库，寻找回答
+             
              if($data_get['type']!=null||$data_get['type']!='')
              {
              	if($data_get['type']=='news')
@@ -226,6 +218,12 @@
              	$ResponseData['PicUrl'][0]=COS_URL."img/tulin_url.jpg";
              	if(COS_SERVER=="SERVER")
              	$ResponseData['PicUrl'][0]=SERVER_URL."img/tulin_url.jpg";
+             	if($data_get['userid']=="true")
+             	{
+             		echo "userid---".$userid=self::Get_Userid($ResponseData['FromUserName']);
+             		$ResponseData['Url'][0]=$data_get['url']."?userid=".$userid;
+             	}
+             	else
                 $ResponseData['Url'][0]=$data_get['url'];
              	}
              	else
@@ -399,6 +397,7 @@
     $params = http_build_query($params);// 将请求参数转换为字符串形式
     if ($method=='post') 
     {
+    	  //curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
     } 
