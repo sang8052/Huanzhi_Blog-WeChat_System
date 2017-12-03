@@ -5,8 +5,8 @@
 //系统重置保护手动开关
 define(SYSTEM_RESET,'FALSE');
 //define(SYSTEM_RESET,'TRUE');
-require('../../sdk/cos-php/cos-autoloader.php');
-require("../../conf.php");
+require_once('../../sdk/cos-php/cos-autoloader.php');
+require_once("../../conf.php");
 require_once("../../SQL_get.php");
 require_once ("../../sdk/image-php/index.php");
 use QcloudImage\CIClient;

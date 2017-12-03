@@ -1,11 +1,14 @@
 <?php 
-require("../../conf.php");
+require_once("System_RunStateCheck.php");         //系统运行状态检测
+require_once ("../../sdk/image-php/index.php");         //加载腾讯图片识别SDK
+require_once('../../sdk/cos-php/cos-autoloader.php');   //加载腾讯COS系统SDK
+use QcloudImage\CIClient;
 if(COS_SERVER=="COS")
 $FIEL_URL=COS_URL;
 if(COS_SERVER=="SERVER")
 $FIEL_URL=SERVER_URL;
 
-if(!isset($_GET['userid']))
+if(!isset($_GET['userid'])||$_GET['userid']==''||$_GET['userid']==NULL)
 {
 	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1001";} </script>';
 	echo $echo;
@@ -50,6 +53,7 @@ if(!isset($_GET['userid']))
   <style type="text/css">
   *#web_content{color: #F5F5F5; font-size:medium;}
   </style>
+    <script src="<?php echo $FIEL_URL?>js/exif_min.js"></script>
 </head>
 <body>
    
@@ -66,12 +70,15 @@ if(!isset($_GET['userid']))
 	<tr><td align="left"><div class="am-input-group"><input name="sex"  type="radio"  id="radio_sex" value="男"/> 男&nbsp;&nbsp;&nbsp;&nbsp;<input name="sex" type="radio"  id="radio_sex"  value="女"/>女</div></td></tr>
 	
 	<tr><td align="left">
-		 <div class="am-input-group"><span class="am-input-group-label"><i class="am-icon-file am-icon-fw"></i></span><input name="pic"  type="file"  class="am-form-field  am-round "size="10" /></div>
-		</td></tr>
-	<tr><td colspan="2">告知：本系统所收集的数据仅供后台工程师优化算法采用，后期可能会对接入课堂点名功能中，我们承诺对于所收集的个人信息将严格保密，为了保证算法的合理性和准确性，请务必准确填写个人信息。【相关信息一经录入，均不可更改】<br/>受光照，算法精度等诸多条件影响，人脸识别得出的数据不能保证绝对精准。</td></tr>
-	<tr><td align="center" ><input name="confirm"  type="checkbox" onclick="agree();" id="radio_confirm"/>我已阅读以上告示，同意收集信息并保证相关信息准确。(因为网络问题，图片上传需要一段时间，请不要重复刷新，以免造成数据异常！)</td</tr>
+		 <div class="am-input-group"><span class="am-input-group-label"><i class="am-icon-file am-icon-fw"></i></span><input name="pic"  id="picupload" type="file"  class="am-form-field  am-round "size="10" /></div>
+    </td></tr>
+    <tr><td align="center"><img src="" id="picview"></td></tr>
+	<tr><td >告知：本系统所收集的数据将严格保密，为了保证算法的合理性和准确性，请务必准确填写个人信息。【相关信息一经录入，均不可更改】<br/>受光照，算法精度等诸多条件影响，人脸识别得出的数据不能保证绝对精准。</td></tr>
+	<tr><td  ><input name="confirm"  type="checkbox" onclick="agree();" id="radio_confirm"/>我已阅读以上告示，同意收集信息并保证相关信息准确。</td</tr>
 	<tr><td align="center" > <button type="submit"  name="submit" class="am-btn am-btn-success am-round am-btn-sm"  disabled="disabled" id="button_submit"  />提交</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset"  name="reset" class="am-btn am-btn-warning am-round am-btn-sm"  id="button_reset"  />重置</buttonn></td</tr>
   <input name="userid" type="hidden" value="<?php echo $_GET['userid']?>" />
+  <input name="picdata" type="hidden" id="picdata" value="" />
+    <input name="picname" type="hidden" id="picname" value="" />
   </table></form>
         </td></tr></table>
    </div>
@@ -80,7 +87,8 @@ if(!isset($_GET['userid']))
 <!--在这里编写你的代码-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="<?php echo $FIEL_URL?>assets/js/select_check.js"></script>
+<script src="<?php echo $FIEL_URL?>js/ImageUpload.js"></script>
+<script src="<?php echo $FIEL_URL?>js/select_check.js"></script>
 <script src="<?php echo $FIEL_URL?>assets/js/jquery-3.2.1.min.js"></script>
 <!--<![endif]-->
 <!--[if lte IE 8 ]>

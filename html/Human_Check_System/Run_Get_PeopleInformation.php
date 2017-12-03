@@ -1,9 +1,8 @@
   <meta charset="utf-8">
 <?php
-require('../../sdk/cos-php/cos-autoloader.php');
-require("../../conf.php");
-require_once("../../SQL_get.php");
-require_once ("../../sdk/image-php/index.php");
+require_once("System_RunStateCheck.php");         //系统运行状态检测
+require_once ("../../sdk/image-php/index.php");         //加载腾讯图片识别SDK
+require_once('../../sdk/cos-php/cos-autoloader.php');   //加载腾讯COS系统SDK
 use QcloudImage\CIClient;
 
 
@@ -75,11 +74,20 @@ function Post_Data_Check()
 	echo "操作出错！数据流3异常！";
 	return FALSE;
 	}
+	else if(!isset($_POST['picdata']))
+	{
+	echo "操作出错！数据流4异常！";
+	return FALSE;
+	}
+	else if(!isset($_POST['picname']))
+	{
+	echo "操作出错！数据流5异常！";
+	return FALSE;
+	}
 	else
 		return TRUE;
 		
 }
-
 
 function UploadPic()
 {
@@ -87,26 +95,17 @@ function UploadPic()
     'credentials'=> array(
         'appId' => COS_APPID,
         'secretId'    => COS_SECRETID,
-        'secretKey' => COS_SECRETKEY)));
-	$TempFile="/www/wwwroot/tempfile/".$_FILES['pic']['name'];
-    $POST['pic']=$_FILES['pic']['tmp_name'];
-	copy($POST['pic'], $TempFile);
-	$exif = exif_read_data($TempFile);
-	if($exif['Orientation']==8)
-	$degrees=90;
-	if($exif['Orientation']==3)
-	$degrees=180;
-	if($exif['Orientation']==6)
-	$degrees=270;
-    //创建图像资源，以jpeg格式为例
-    $source = imagecreatefromjpeg($TempFile);
-    //使用imagerotate()函数按指定的角度旋转
-    $rotate = imagerotate($source, $degrees, 0);
-    //旋转后的图片保存
-    imagejpeg($rotate,$TempFile);
-   $File_Type=substr(strrchr($_FILES['pic']['name'], '.'), 1);
+        'secretKey' => COS_SECRETKEY))); 
+	$pic['data']=$_POST['picdata'];	
+preg_match('/^(data:\s*image\/(\w+);base64,)/', $pic['data'], $pic['file']);
+$pic['type'] = $pic['file'][2];    //获取图片的类型jpg png等
+$pic['name'] = $_POST['picname'];//图片重命名
+$savepath = "/www/wwwroot/tempfile/".$pic['name'];   //图片保存目录
+$TempFile=$savepath; 
+file_put_contents($savepath, base64_decode(str_replace( $pic['file'], '', $pic['data'])));   //对图片进行解析并保存
+  
    $Now_Time=date('Y-m-d H:i:s');
-   $Cos_Filename="/PeopleInformation/Pic_Upload/".md5($_FILES['pic']['name'].$Now_Time).".".$File_Type;
+   $Cos_Filename="/PeopleInformation/Pic_Upload/".md5($pic['name'].$Now_Time).".".$pic['type'] ;
    try {
     $result = $cosClient->upload(
                  $bucket=COS_NAME,
@@ -116,9 +115,10 @@ function UploadPic()
     } 
     catch (\Exception $e) {echo "$e\n"; return FALSE;}
 	$result = @unlink ($TempFile); 
-     $Cos_FileUrl=$Cos_Filename."?imageMogr2/auto-orient";
+     $Cos_FileUrl=$Cos_Filename;
 	 return $Cos_FileUrl;
 }
+
 
 function UserData_SetPeopleInformation($userid,$username,$usersex,$picurl)
 {
