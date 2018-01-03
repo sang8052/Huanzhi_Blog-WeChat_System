@@ -131,10 +131,13 @@ function Get_Client_Ip($type = 0, $strict = false)   //获得当前客户端的i
    curl_close($curl);
    $response = json_decode($response, true);//将json转为数组格式数据
    
-   if($response['province']=='局域网')$response['province']='内部测试';
-   return $response['province'];
-   if($response['city']!='Array')
-   return  $response['city'];
+    if($response['province']=='局域网')$response['province']='内部测试';
+      {
+        if($response['city']!='Array')
+        return   $response['province'].$response['city'];
+        else  return $response['province'];
+      }
+  
     	
 
     }
