@@ -21,7 +21,7 @@
               		<tr><td colspan="2" align="center"><input type="submit" value="修改密码" onclick="return Pass_Relcheck()">&nbsp;&nbsp;<input type="reset" value="全部清除"></td></tr>
               		</table>
               </form>
-             <script src="<?php echo $FIEL_URL?>js/Pass_check.js"></script>
+             
               </p>
               <hr/><p><font color="red">注:密码中必须包含字母、数字、特称字符，长度在8-16位之间</font></p>    
              </div>

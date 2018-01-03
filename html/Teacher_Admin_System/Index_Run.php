@@ -10,8 +10,6 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="icon" type="image/png" href="<?php echo $FIEL_URL?>img/logo_72X72.png">
-  <script src="<?php echo $FIEL_URL?>js/PC_Html5_Check.js"></script>
-   <script src="<?php echo $FIEL_URL?>js/URL_SHOW.js"></script>
   <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/amazeui.min.css"/>
   <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/admin.css">
   </head>

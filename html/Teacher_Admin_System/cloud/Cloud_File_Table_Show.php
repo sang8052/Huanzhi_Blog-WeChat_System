@@ -89,7 +89,7 @@ $sql="select * from file_share where username='".$_SESSION['username']."' and fi
               <button type="button" onclick="location.href='Index_Run.php?Run=Cloud_File&Action=Show'" class="am-btn am-btn-default"><span class="am-icon-home"></span>返回根目录 </button>
               <button type="button" onclick="location.href='Index_Run.php?Run=Cloud_File&Action=Show-'" class="am-btn am-btn-default"><span class="am-icon-mail-reply"></span> 返回上一层</button>
               <button type="button" class="am-btn am-btn-default" onclick="New_File_Bag()"><span class="am-icon-plus"></span> 新建文件夹</button>
-               <script src="<?php echo $FIEL_URL?>js/New_File_Bag.js"></script>
+               
             </div>
           </div>
         </div>

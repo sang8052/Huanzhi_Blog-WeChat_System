@@ -12,6 +12,7 @@
 <!--<![endif]-->
 <script src="<?php echo $FIEL_URL?>assets/js/amazeui.min.js"></script>
 <script src="<?php echo $FIEL_URL?>assets/js/app.js"></script>
+<script src="<?php echo $FIEL_URL?>js/Teacher_Admin_System.js"></script>
 </body>
 </html>
 
