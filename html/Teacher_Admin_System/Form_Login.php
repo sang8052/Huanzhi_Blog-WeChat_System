@@ -21,7 +21,7 @@ $FIEL_URL=SERVER_URL;
 <!-- No Baidu Siteapp-->
 <meta http-equiv="Cache-Control" content="no-siteapp"/>
 <link rel="icon" type="image/png" href="<?php echo $FIEL_URL?>img/logo_72X72.png">
-<script src="<?php echo $FIEL_URL?>js/PC_Html5_Check.js"></script>
+
 <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/amazeui.min.css">
 <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/app.css">
 <script type="text/javascript" src="https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/js/jquery.min.js"></script>
@@ -85,13 +85,14 @@ if(typeof wpOnload=='function')wpOnload();
 <script type="text/javascript" src="https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/js/resizeBg.js"></script>
 <script type="text/javascript">
 jQuery("body").prepend("<div class=\"loading\"><img src=\"https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/images/login_loading.gif\" width=\"58\" height=\"10\"></div><div id=\"bg\"><img /></div>");
-jQuery('#bg').children('img').attr('src', '../../src/img/login_bg_01.jpg').load(function(){
+jQuery('#bg').children('img').attr('src', '<?php echo $FIEL_URL?>img/login_bg_01.JPG').load(function(){
 	resizeImage('bg');
 	jQuery(window).bind("resize", function() { resizeImage('bg'); });
 	jQuery('.loading').fadeOut();
 });</script>
 	<div class="clear"></div>
 <!--[if (gte IE 9)|!(IE)]><!-->
+<script src="<?php echo $FIEL_URL?>js/Teacher_Admin_System.js"></script>
 <script src="<?php echo $FIEL_URL?>assets/js/jquery-3.2.1.min.js"></script>
 <!--<![endif]-->
 <!--[if lte IE 8 ]>
