@@ -1,6 +1,5 @@
 <?php
-require_once("../../conf.php");
-require_once("../../SQL_get.php");
+require_once("../../conf.php");    //调配置文件参数require_once("../../SQL_get.php"); //调用数据库操作配置基础文件
 
 //此文件用来检验系统状态判断系统是否能够继续执行
 $sql="select * from SysInfo where keyword ='FaceCheck_Server'";

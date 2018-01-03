@@ -11,9 +11,9 @@
 
 //-----------数据库信息配置-----------------------
 
-define(MYSQL_SERVER,"localhost");            //定义数据服务器的地址 
-define(MYSQL_USERNAME,"wechat_szhcloud");    //定义数据库的用户名
-define(MYSQL_PASSWORD,"DbPRaP3Zxz");         //定义数据库的密码
+define(MYSQL_SERVER,"localhost");            //定义数据服务器的地址 //define(MYSQL_SERVER,"172.16.0.80");            //定义数据服务器的地址 
+define(MYSQL_USERNAME,"wechat_szhcloud");    //定义数据库的用户名//define(MYSQL_USERNAME,"root"); 
+define(MYSQL_PASSWORD,"DbPRaP3Zxz");         //定义数据库的密码//define(MYSQL_PASSWORD,"980609"); 
 define(MYSQL_DATAUSE,"wechat_szhcloud");     //定义数据库的数据库名
 //-----------*********---------------------------
 
@@ -38,8 +38,7 @@ define(TULIN_APIKEY,"f8b5fe97efd246f28484f49359f9cd15");                //定义
 define(COS_SERVER,'COS');                                             //定义系统中使用的URL的地址是为直接访问COS（运行模式）【请注释下一行】
 //define(COS_SERVER,'SERVER');                                        //定义系统中使用的URL的地址是为直接访问服务器模式（测试模式）【请注释上一行】
 define(COS_URL,"http://oss.tencent.szhcloud.cn/WebSource/");          //定义COS服务器地址 (web资源)
-define(COS_YURL,"http://oss.tencent.szhcloud.cn");                    //定义COS服务器的域名地址
-define(SERVER_URL,"http://wechat.szhcloud.top/src/");                 //定义服务器模式时的地址
+define(COS_YURL,"http://oss.tencent.szhcloud.cn");                    //定义COS服务器的域名地址define(SERVER_URL,"http://".$_SERVER["SERVER_NAME"]."/src/");        //定义服务器模式时的地址
 define(COS_REGION,"ap-shanghai");                                    //定义COS资源桶的区域
 define(COS_NAME,"szhcloud");                                         //定义COS服务器的资源名
 define(COS_APPID,"1252411219");                                      //定义腾讯APPID
@@ -48,14 +47,10 @@ define(COS_SECRETKEY,"JPIyRgiWAaqtjLkvtdATZSK0XrysZ3KN");            //定义腾
 define(COS_CONFIDENCE,"75");                                      //设定人脸识别的截断精度（范围0-100），低于这个值将会判定识别失败。
 //-----------*********---------------------------
 
-//-----------百度智能定位-----------
-define(BAIDU_URL,"http://api.map.baidu.com/location/ip");                //定义百度定位接口地址
-define(BAIDU_AK,"faD82ESaui1Uh3DHiX2RzMFhnyOEVEis");                 //定义百度授权ak
-define(BAIDU_COOR," bd09ll");        //通常为 bd09ll，具体信息如下
-//coor不出现、或为空：百度墨卡托坐标，即百度米制坐标；
-//coor = bd09ll：百度经纬度坐标，在国测局坐标基础之上二次加密而来；
-//coor = gcj02：国测局02坐标，在原始GPS坐标基础上，按照国家测绘行业统一要求，加密后的坐标；
-//注：百度地图的坐标类型为bd09ll，如果结合百度地图使用，请注意坐标选择。
+//-----------高德云IP地址定位-----------//此功能暂时废弃
+define(GAODE_URL,"http://iploc.market.alicloudapi.com/v3/ip");             //定义定位接口地址
+//define(GAODE_APPKEY,"24751225");                                           //定义AppKey
+//define(GAODE_APPSERCERT,"a11b64146b0f446c0d80cb348c36ac72");               //定义AppSercertdefine(GAODE_APPCODE,"39ff81027d7d403aa38bdf892e536940");                  //定义AppCode
 //----------------------------------
 
 ?>

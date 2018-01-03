@@ -19,17 +19,14 @@ require_once("SQL_do.php");$sql="select * from SysInfo where keyword='Wechat_Se
    	while($row[$i] = mysql_fetch_array($this->result))
      {
      	$i++;
-    }
+    }    $row[0]=$i-1;
     return $row;
    }
    function Get_Result()
    {
    	
    	$row = mysql_fetch_array($this->result);
-     
-     
-    
-    return $row;
+       return $row;
    }
 }
 

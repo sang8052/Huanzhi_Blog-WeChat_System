@@ -383,15 +383,7 @@
      
        public function Get_Ip_Loc($ip)
     {
-    	$data_baidu_url=BAIDU_URL;
-    	$data_baidu['ip']=$ip;
-    	$data_baidu['ak']=BAIDU_AK;
-    	$data_baidu['coor']=BAIDU_COOR;
-    	$method='get';
-    	$loc=self::JSON_get_post($data_baidu_url,$data_baidu, $method);
-    	return $loc['content']['address'];
-    	
-    }
+    $host = GAODE_URL;      $method = "GET";    $appcode = "你自己的AppCode";    $headers = array();    array_push($headers, "Authorization:APPCODE " . $appcode);    $querys = "ip=".$ip;    $url = $host."?".$querys;    $curl = curl_init();    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);    curl_setopt($curl, CURLOPT_URL, $url);    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    curl_setopt($curl, CURLOPT_FAILONERROR, false);    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);    curl_setopt($curl, CURLOPT_HEADER, true);    if (1 == strpos("$".$host, "https://"))    {        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);    }   	 $response = curl_exec($curl);    // if ($response === false) echo curl_error(curl_exec($curl));    curl_close($curl);    $response = json_decode($response, true);//将json转为数组格式数据    return $response['province']['city'];    }
     
      private function Get_Userid($wechatid)
     {
