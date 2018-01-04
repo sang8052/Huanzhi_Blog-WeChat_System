@@ -1,5 +1,5 @@
 ﻿# Host: 172.16.0.80  (Version 5.5.54-log)
-# Date: 2018-01-03 12:25:51
+# Date: 2018-01-04 21:52:54
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -78,8 +78,34 @@ CREATE TABLE `login_teacher` (
 #
 
 /*!40000 ALTER TABLE `login_teacher` DISABLE KEYS */;
-INSERT INTO `login_teacher` VALUES (1,'admin','172.16.0.54','2017-12-30 13:06:21','Success',NULL),(2,'admin','172.16.0.54','2017-12-30 13:06:36','Success',NULL),(3,'admin','172.16.0.56','2017-12-30 16:27:35','Success',NULL),(4,'admin','172.16.0.80','2017-12-30 16:31:20','Success',NULL),(5,'admin','172.16.0.56','2017-12-30 22:23:17','Fail','1322'),(6,'admin','172.16.0.54','2017-12-31 19:52:34','Success',NULL),(7,'admin','172.16.0.54','2017-12-31 21:26:38','Success',NULL),(8,'admin','172.16.0.54','2017-12-31 23:01:10','Success',NULL),(9,'admin','172.16.0.54','2018-01-01 00:29:07','Success',NULL),(10,'admin','172.16.0.54','2018-01-01 19:09:41','Success',NULL),(11,'admin','172.16.0.54','2018-01-01 20:49:10','Success',NULL),(12,'admin','172.16.0.54','2018-01-01 22:21:08','Success',NULL),(13,'admin','172.16.0.54','2018-01-01 23:52:02','Fail','admin'),(14,'admin','172.16.0.54','2018-01-01 23:52:11','Success',NULL),(15,'admin','172.16.0.54','2018-01-01 23:59:40','Fail','admin'),(16,'admin','172.16.0.54','2018-01-01 23:59:50','Success',NULL),(17,'admin','172.16.0.80','2018-01-02 00:39:47','Fail','admin'),(18,'admin','172.16.0.80','2018-01-02 00:39:54','Success',NULL),(19,'admin','172.16.0.80','2018-01-02 01:10:08','Success',NULL),(20,'admin','172.16.0.54','2018-01-02 10:28:08','Fail','admin'),(21,'admin','172.16.0.54','2018-01-02 10:28:54','Success',NULL),(22,'admin','172.16.0.54','2018-01-02 14:29:50','Success',NULL),(23,'admin','172.16.0.54','2018-01-02 17:00:55','Success',NULL),(24,'admin','172.16.0.54','2018-01-02 19:45:37','Success',NULL),(25,'admin','172.16.0.54','2018-01-02 19:55:25','Success',NULL),(26,'admin','172.16.0.54','2018-01-02 20:16:14','Success',NULL),(27,'admin','172.16.0.54','2018-01-02 21:46:54','Success',NULL),(28,'admin','172.16.0.80','2018-01-02 22:26:07','Success',NULL),(29,'admin','172.16.0.54','2018-01-03 10:37:37','Success',NULL),(30,'admin','172.16.0.54','2018-01-03 12:11:46','Success',NULL);
+INSERT INTO `login_teacher` VALUES (1,'admin','172.16.0.54','2017-12-30 13:06:21','Success',NULL),(2,'admin','172.16.0.54','2017-12-30 13:06:36','Success',NULL),(3,'admin','172.16.0.56','2017-12-30 16:27:35','Success',NULL),(4,'admin','172.16.0.80','2017-12-30 16:31:20','Success',NULL),(5,'admin','172.16.0.56','2017-12-30 22:23:17','Fail','1322'),(6,'admin','172.16.0.54','2017-12-31 19:52:34','Success',NULL),(7,'admin','172.16.0.54','2017-12-31 21:26:38','Success',NULL),(8,'admin','172.16.0.54','2017-12-31 23:01:10','Success',NULL),(9,'admin','172.16.0.54','2018-01-01 00:29:07','Success',NULL),(10,'admin','172.16.0.54','2018-01-01 19:09:41','Success',NULL),(11,'admin','172.16.0.54','2018-01-01 20:49:10','Success',NULL),(12,'admin','172.16.0.54','2018-01-01 22:21:08','Success',NULL),(13,'admin','172.16.0.54','2018-01-01 23:52:02','Fail','admin'),(14,'admin','172.16.0.54','2018-01-01 23:52:11','Success',NULL),(15,'admin','172.16.0.54','2018-01-01 23:59:40','Fail','admin'),(16,'admin','172.16.0.54','2018-01-01 23:59:50','Success',NULL),(17,'admin','172.16.0.80','2018-01-02 00:39:47','Fail','admin'),(18,'admin','172.16.0.80','2018-01-02 00:39:54','Success',NULL),(19,'admin','172.16.0.80','2018-01-02 01:10:08','Success',NULL),(20,'admin','172.16.0.54','2018-01-02 10:28:08','Fail','admin'),(21,'admin','172.16.0.54','2018-01-02 10:28:54','Success',NULL),(22,'admin','172.16.0.54','2018-01-02 14:29:50','Success',NULL),(23,'admin','172.16.0.54','2018-01-02 17:00:55','Success',NULL),(24,'admin','172.16.0.54','2018-01-02 19:45:37','Success',NULL),(25,'admin','172.16.0.54','2018-01-02 19:55:25','Success',NULL),(26,'admin','172.16.0.54','2018-01-02 20:16:14','Success',NULL),(27,'admin','172.16.0.54','2018-01-02 21:46:54','Success',NULL),(28,'admin','172.16.0.80','2018-01-02 22:26:07','Success',NULL),(29,'admin','172.16.0.54','2018-01-03 10:37:37','Success',NULL),(30,'admin','172.16.0.54','2018-01-03 12:11:46','Success',NULL),(31,'admin','172.16.0.54','2018-01-03 15:01:30','Success',NULL),(32,'admin','172.16.0.54','2018-01-03 16:31:55','Success',NULL),(36,'admin','172.16.0.54','2018-01-03 20:04:20','Success',NULL),(37,'admin','172.16.0.54','2018-01-04 08:42:13','Success',NULL),(38,'admin','172.16.0.54','2018-01-04 15:36:30','Success',NULL),(39,'admin','172.16.0.54','2018-01-04 20:41:37','Success',NULL);
 /*!40000 ALTER TABLE `login_teacher` ENABLE KEYS */;
+
+#
+# Structure for table "mail"
+#
+
+DROP TABLE IF EXISTS `mail`;
+CREATE TABLE `mail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `send_username` varchar(255) DEFAULT NULL,
+  `get_username` varchar(255) DEFAULT NULL,
+  `get_read` tinyint(1) DEFAULT NULL,
+  `get_show` tinyint(1) DEFAULT NULL,
+  `send_show` tinyint(1) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `content` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "mail"
+#
+
+/*!40000 ALTER TABLE `mail` DISABLE KEYS */;
+INSERT INTO `mail` VALUES (1,'admin','测试消息接收人',0,1,0,'测试消息','2018-01-04 21:22:04','<p>这是我发给你的测试消息</p><table><tbody><tr class=\"firstRow\"><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">姓名</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">学号</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">班级</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">性别</td></tr><tr><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">344</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">3434342</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">4343434</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">22222</td></tr><tr><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">234243</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">234234</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">2234324</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">3333</td></tr></tbody></table><p><br/></p>'),(2,'运维团队','admin',1,0,1,'系统退信','2018-01-04 21:22:04','尊敬的&nbsp;测试教师&nbsp;先生,您好，您于&nbsp;2018-01-04 21:22:04&nbsp;发送给&nbsp;测试消息接收人&nbsp;，主题为&nbsp;测试消息&nbsp;的邮件因为无法找到对应的收信人，因此已经被退回。该邮件的内容如下:<br/><p>这是我发给你的测试消息</p><table><tbody><tr class=\"firstRow\"><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">姓名</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">学号</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">班级</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">性别</td></tr><tr><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">344</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">3434342</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">4343434</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">22222</td></tr><tr><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">234243</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">234234</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">2234324</td><td width=\"172\" valign=\"top\" style=\"word-break: break-all;\">3333</td></tr></tbody></table><p><br/></p>');
+/*!40000 ALTER TABLE `mail` ENABLE KEYS */;
 
 #
 # Structure for table "sysinfo"
@@ -123,7 +149,7 @@ CREATE TABLE `sysnotice` (
 #
 
 /*!40000 ALTER TABLE `sysnotice` DISABLE KEYS */;
-INSERT INTO `sysnotice` VALUES (1,'Teacher_Admin_Server','系统正在建设中，更多功能敬请期待。','2017-12-30 12:17:38');
+INSERT INTO `sysnotice` VALUES (1,'Teacher_Admin_Server','账户管理、资源共享模块已经建设完成，其他功能正在建设中。<br/>\n模块建设顺序规划：站内消息->网页博文->学生管理->随堂练习','2017-01-03 15:06:46');
 /*!40000 ALTER TABLE `sysnotice` ENABLE KEYS */;
 
 #

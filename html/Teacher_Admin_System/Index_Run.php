@@ -72,6 +72,33 @@
     {
     	require_once("cloud/Cloud_File_Del.php");
     }
+    
+    else if($_GET['Run']=='Mail_Write')
+    {
+    	require_once("mail/Html_Mail_Write.php");
+    }
+    
+    else if($_GET['Run']=='Mail_Write_Fun')
+    {
+    	require_once("mail/Mail_Write.php");
+    }
+    
+    else if($_GET['Run']=='Mail_Send'||$_GET['Run']=='Mail_Get'||$_GET['Run']=='Mail_New')
+    {
+    	require_once("mail/Mail_List.php");
+    }
+    
+  
+    
+    else if($_GET['Run']=='Mail_Show')
+    {
+    	   	require_once("mail/Mail_Show.php");
+    }
+	
+	else if($_GET['Run']=='Mail_Del_Send'||$_GET['Run']=='Mail_Del_Get')
+    {
+    	   	require_once("mail/Mail_Del.php");
+    }
 	
 	else if ($_GET['Run']=='Login_Out')   //退出登录
 	{

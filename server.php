@@ -375,9 +375,7 @@
     } else if (isset($_SERVER['REMOTE_ADDR'])) {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
-    /* IP地址合法性验证 */
-    $long = sprintf("%u", ip2long($ip));
-    $ip = $long ? [$ip, $long] : ['0.0.0.0', 0];
+    $long = sprintf("%u", ip2long($ip));    $ip = $long ? [$ip, $long] : ['0.0.0.0', 0];
     return $ip[$type];
      }
      

@@ -12,7 +12,7 @@ if($_GET['Action']!='Search')
 	}
    else
    	{
-   		echo "ok";
+   		
    	 $i=$_SESSION['File_Bag'][0];
    	 $File_Bag=$_GET['File_Bag'];
 	 if($File_Bag!=$_SESSION['File_Bag'][$i])
@@ -31,7 +31,6 @@ if($_GET['Action']!='Search')
    $sql=sprintf("select * from file_share where username='%s' and uplocal ='%s' and type='bag' order by id  ",$_SESSION['username'],$File_Bag);
    $data_get=new Mysql_get($sql);
    $row=$data_get->GetResult(); 
-  
    $row_show=$data_get->GetRowNum();
    $sql=sprintf("select * from file_share where username='%s' and uplocal ='%s' and type='file' order by id  ",$_SESSION['username'],$File_Bag);
    $data_get=new Mysql_get($sql);
@@ -50,6 +49,7 @@ $sql="select * from file_share where username='".$_SESSION['username']."' and fi
 }
 
 ?>
+<!-- 页面内容开始 -->
 <div class="admin-content">
     <div class="admin-content-body">
       <div class="am-cf am-padding am-padding-bottom-0">
@@ -163,5 +163,6 @@ $sql="select * from file_share where username='".$_SESSION['username']."' and fi
            </div>
            </div>
            </div>
-      
+         
+
 	

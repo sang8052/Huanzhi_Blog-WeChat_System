@@ -8,7 +8,6 @@
           <ul class="am-list am-collapse admin-sidebar-sub " id="collapse-user">
             <li><a href="Index_Run.php?Run=Login_Data" class="am-cf"><span class="am-icon-calendar"></span> 登录日志</a></li>
              <li><a href="Index_Run.php?Run=User_Data" class="am-cf"><span class="am-icon-database"></span>个人信息</a></li>
-            
           </ul>
         </li>
         
@@ -38,7 +37,13 @@
          
          <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-mail'}"><span class="am-icon-envelope"></span> 站内消息 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-         
+         <ul class="am-list am-collapse admin-sidebar-sub " id="collapse-mail">
+         	   <li><a href="Index_Run.php?Run=Mail_Write" class="am-cf"><span class="am-icon-pencil-square-o"></span>写消息</a></li>
+             <li><a href="Index_Run.php?Run=Mail_New" class="am-cf"><span class="am-icon-envelope-o"></span>未读消息</a></li>
+             <li><a href="Index_Run.php?Run=Mail_Get" class="am-cf"><span class="am-icon-folder"></span>收件夹</a></li>
+             <li><a href="Index_Run.php?Run=Mail_Send" class="am-cf"><span class="am-icon-folder-o"></span>发件夹</a></li>
+             
+          </ul>
          
          </li>
         <li><a href="Index_Run.php?Run=Login_Out"><span class="am-icon-sign-out"></span> 注销</a></li>

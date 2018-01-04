@@ -18,7 +18,7 @@
               		<tr><td align="left" width="80">原密码:</td><td><input name="Old_Pass" type="password"  width="20"></td></tr>
               		<tr><td align="left" width="80">新密码:</td><td><input name="New_Pass" id="New_Pass" type="password" width="20"></td></tr>
               		<tr><td align="left" width="80">重复密码:</td><td><input name="New_Pass_check" id="New_Pass_check"  type="password" width="20"></td></tr>
-              		<tr><td colspan="2" align="center"><input type="submit" value="修改密码" onclick="return Pass_Relcheck()">&nbsp;&nbsp;<input type="reset" value="全部清除"></td></tr>
+              		<tr><td colspan="2" align="center"><table border="0"><tr><td><button  type="submit" class="am-btn am-btn-default am-btn-xs am-text-primary am-hide-sm-only"><span class="am-icon-check"></span>修改密码</button></td><td><button  type="reset" class="am-btn am-btn-default am-btn-xs am-text-warning am-hide-sm-only"><span class="am-icon-refresh"></span>全部重置</button></td></tr></table></td></tr>
               		</table>
               </form>
              
@@ -45,7 +45,7 @@
               		<tr><td>性别：</td><td><?php echo $row['sex'];?></td></tr>
               		<tr><td>教授课程：</td><td align="center" width="350"><input  name="lesson" type="text" value="<?php echo $row['lesson'];?>" style="width:335px;"></td></tr>
               		<tr><td>个性签名：</td><td colspan="3" align="center"><textarea name="signs" cols="70" rows="5"><?php echo $row['signs']; ?></textarea></td></tr>
-              		<tr><td align="center" colspan="4">	<input type="submit" value="修改信息" > </td></tr>
+              		<tr><td align="center" colspan="4">	<button  type="submit" class="am-btn am-btn-default am-btn-xs am-text-primary am-hide-sm-only"><span class="am-icon-check"></span>修改信息</button> </td></tr>
               		</table>
               		</from>
               </p>                      

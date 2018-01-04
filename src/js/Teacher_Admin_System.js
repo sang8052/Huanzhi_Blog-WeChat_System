@@ -50,7 +50,9 @@ function New_File_Bag()
                  } 
               return true; 
                } 
-                 window.onload = function() {
+ 
+
+window.onload = function() {
 
             if (window.applicationCache) //检查浏览器是否支持HTML5技术
             {
@@ -72,4 +74,30 @@ function New_File_Bag()
 function URL_SHOW(url)
 {
 	alert("下载地址:"+url);
+}
+
+function Mail_Write_Reset()
+{
+	alert("重置成功！");
+	window.location.href="Index_Run.php?Run=Mail_Write";
+}
+
+function Mail_check()
+{
+	
+	 var get_username=document.getElementById("get_username").value;
+	 var title=document.getElementById("title").value;
+	 
+	 get_username=get_username.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+	 title=title.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+	
+	 if ( get_username== '' ||  get_username == undefined ||  get_username== null) 
+	 {alert("请输入消息收件人！"); return false;}
+	 else 
+	 { if(title== '' ||  title == undefined ||  title== null)
+	   {alert("请输入消息主题！"); return false;}
+	   else return true;
+	  }
+	
+	
 }

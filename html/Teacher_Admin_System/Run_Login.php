@@ -23,6 +23,7 @@ if(md5($password)==$row['password'])
 	session_start();
 	$_SESSION['username']=$username;
 	$_SESSION['name']=$row['name'];
+	$_SESSION['sex']=$row['sex'];
 	$_SESSION['ip']=Get_Client_Ip();
 	$_SESSION['time']=Get_Time();
 	$sql=sprintf("insert into login_teacher (username,ip,logintime,pass_state) values('%s','%s','%s','Success')",$username,Get_Client_Ip(),Get_Time());
@@ -34,6 +35,7 @@ else
 	$sql=sprintf("insert into login_teacher (username,ip,logintime,pass_state,pass_wrong) values('%s','%s','%s','Fail','%s')",$username,Get_Client_Ip(),Get_Time(),$password);
     $data_get=new Mysql_get($sql);
 	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=2004";} </script>';echo $echo;
+   
 }
 	
 
