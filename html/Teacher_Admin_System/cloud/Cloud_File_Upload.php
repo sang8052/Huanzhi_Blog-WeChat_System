@@ -1,4 +1,10 @@
 <?php
+if(!is_file("../Safe_Check.php"))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
+}
+?>
+<?php
 $i=$_SESSION['File_Bag'][0];
 $File_Bag=$_SESSION['File_Bag'][$i];
 if ($_FILES["File_Upload"]["error"] > 0)

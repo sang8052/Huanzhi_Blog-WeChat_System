@@ -14,8 +14,8 @@ $FIEL_URL=SERVER_URL;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>教师管理后台 &lsaquo; 登录</title>
 <link rel='dns-prefetch' href='//s.w.org' />
-<link rel='stylesheet' href='https://www.szhcloud.cn/newblog/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5B%5D=dashicons,buttons,forms,l10n,login&amp;ver=4.8.4' type='text/css' media='all' />
-<link rel="stylesheet" type="text/css" href="https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/css/login.css" />
+<link rel='stylesheet' href='<?php echo $FIEL_URL?>css/login_index.css' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" href="<?php echo $FIEL_URL?>css/login.css" />
 <!-- Set render engine for 360 browser -->
 <meta name="renderer" content="webkit">
 <!-- No Baidu Siteapp-->
@@ -24,7 +24,7 @@ $FIEL_URL=SERVER_URL;
 
 <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/amazeui.min.css">
 <link rel="stylesheet" href="<?php echo $FIEL_URL?>assets/css/app.css">
-<script type="text/javascript" src="https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $FIEL_URL?>js/jquery.min.js"></script>
 <meta name='robots' content='noindex,follow' />
 <meta name="viewport" content="width=device-width" />
 </head>
@@ -32,21 +32,30 @@ $FIEL_URL=SERVER_URL;
 		<div id="login">
 		<h1>教师管理后台</h1>
 	
-<form name="loginform" id="loginform" action="Run_Login.php" method="post">
+<form name="loginform" id="loginform" action="Index_Run.php?Run=Login" method="post">
 	<p>
-		<label for="user_login">用户名<br />
-		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
+		<label  for="user_login">用户名<br />
+		<input type="text" name="log" id="user_login" class="input" value="" size="35" /></label>
 	</p>
 	<p>
 		<label for="user_pass">密码<br />
-		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></label>
+		<input type="password" name="pwd" id="user_pass" class="input" value="" size="35" /></label>
 	</p>
-		<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> 记住我的登录信息</label></p>
+		
 	<p class="submit">
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="登录" />
 		<input type="hidden" name="redirect_to" value="https://www.szhcloud.cn/newblog/wp-admin/" />
 		<input type="hidden" name="testcookie" value="1" />
 	</p>
+	
+	 <p>系统版本：<?php echo $SYSTEM["VERSION"]; ?>&nbsp;<?php echo $SYSTEM["BUILD"]; ?><br/></p>
+	 <p>通知：<br/><?php 
+              	$sql="select * from sysnotice where keyword ='Teacher_Admin_Server'";
+                $data_get=new Mysql_get($sql);
+                $row=$data_get->Get_Result();
+				        echo $row['content'];
+              		?>
+              		</p>
 </form>
 
 <p id="nav">
@@ -82,9 +91,9 @@ if(typeof wpOnload=='function')wpOnload();
 	<div class="footer">
    <p class="am-padding-left">Copyright &copy; 2017 szhcloud.cn <a href="https://www.szhcloud.cn/newblog/" target="_blank">寰智博客 </a>All Rights | Author by <a href="https://github.com/sang8052/Huanzhi_Blog-WeChat_System" target="_blank">sang8052</a></p>
      </div>
-<script type="text/javascript" src="https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/js/resizeBg.js"></script>
+<script type="text/javascript" src="<?php echo $FIEL_URL?>js/resizeBg.js"></script>
 <script type="text/javascript">
-jQuery("body").prepend("<div class=\"loading\"><img src=\"https://www.szhcloud.cn/newblog/wp-content/themes/presence-master/images/login_loading.gif\" width=\"58\" height=\"10\"></div><div id=\"bg\"><img /></div>");
+jQuery("body").prepend("<div class=\"loading\"><img src=\"<?php echo $FIEL_URL?>img/loading.gif\"  ></div><div id=\"bg\"><img /></div>");
 jQuery('#bg').children('img').attr('src', '<?php echo $FIEL_URL?>img/login_bg_01.JPG').load(function(){
 	resizeImage('bg');
 	jQuery(window).bind("resize", function() { resizeImage('bg'); });

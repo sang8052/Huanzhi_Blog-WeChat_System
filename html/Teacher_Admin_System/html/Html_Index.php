@@ -1,4 +1,10 @@
 <!-- 页面内容开始 -->
+<?php
+if(!is_file("../Safe_Check.php"))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
+}
+?>
   <div class="admin-content">
     <div class="admin-content-body">
       <div class="am-cf am-padding">
@@ -12,11 +18,10 @@
                <h3 class="am-panel-title">系统信息</h3>
              </div>
              <div class="am-panel-bd">
-              <p>系统版本：<?php echo $SYSTEM["VERSION"]; ?> <br/>
-              Build Date:<?php echo $SYSTEM["BUILD"]; ?><br/>
+              <p>系统版本：<?php echo $SYSTEM["VERSION"]; ?> &nbsp;<?php echo $SYSTEM["BUILD"]; ?><br/>
                            客户端IP地址:<?php echo $_SESSION['ip']?><br/>
                            登录时间：<?php echo $_SESSION['time']?><br/>
-                                                      登录有效时间：<? echo date('Y-m-d H:i:s',strtotime($_SESSION['time'])+5400)?><br/>
+                                                      登录有效时间：<? echo date('Y-m-d H:i:s',strtotime($_SESSION['timeactive'])+5400)?><br/>
                                                       服务器域名：<?php echo "http://".$_SERVER['SERVER_NAME']?><br/> 
               </p>                      
              </div>

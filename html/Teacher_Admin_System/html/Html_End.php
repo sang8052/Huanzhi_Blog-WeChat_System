@@ -1,4 +1,10 @@
 <!-- 页面尾部 开始 -->
+<?php
+if(!is_file("../Safe_Check.php"))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
+}
+?>
 <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 
 <!--[if lt IE 9]>

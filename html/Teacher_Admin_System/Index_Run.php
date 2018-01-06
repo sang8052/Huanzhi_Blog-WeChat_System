@@ -1,4 +1,7 @@
-<?php require_once("Login_Check.php"); ?>
+<?php 
+require_once("Login_Check.php"); 
+
+?>
 <!-- 网页头部 开始-->
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -25,6 +28,12 @@
 	require_once("html/Html_SideBar.php");//加载侧边栏
     if(!isset($_GET['Run']))  require_once("html/Html_Index.php"); //加载主页面（默认主页）
     
+    
+    else if ($_GET['Run']=='Login')   //执行登录操作
+	{
+		require_once("user/Run_Login.php");
+	} 
+	
     else if ($_GET['Run']=='Login_Data')   //显示登录日志
 	{
 		require_once("user/Html_Login_Data.php");
@@ -95,7 +104,7 @@
     	   	require_once("mail/Mail_Show.php");
     }
 	
-	else if($_GET['Run']=='Mail_Del_Send'||$_GET['Run']=='Mail_Del_Get')
+	else if($_GET['Run']=='Mail_Del_Sen89'||$_GET['Run']=='Mail_Del_Get')
     {
     	   	require_once("mail/Mail_Del.php");
     }

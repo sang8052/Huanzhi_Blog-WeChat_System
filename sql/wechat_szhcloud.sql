@@ -1,5 +1,5 @@
 ﻿# Host: 172.16.0.80  (Version 5.5.54-log)
-# Date: 2018-01-04 21:52:54
+# Date: 2018-01-06 13:58:38
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -48,14 +48,14 @@ CREATE TABLE `file_share` (
   `time` varchar(255) DEFAULT NULL,
   `size` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "file_share"
 #
 
 /*!40000 ALTER TABLE `file_share` DISABLE KEYS */;
-INSERT INTO `file_share` VALUES (29,'admin','2017_11_30 上午4_41 Office Lens (1).jpg','Home','http://oss.tencent.szhcloud.cnFile_Share/29-2017_11_30 上午4_41 Office Lens (1).jpg','file','2018-01-03 10:38:04','142.6298828125KB');
+INSERT INTO `file_share` VALUES (30,'admin','backgroud_01.jpg','Home','http://oss.tencent.szhcloud.cn/File_Share/30-backgroud_01.jpg','file','2018-01-06 08:27:46','390.203125KB');
 /*!40000 ALTER TABLE `file_share` ENABLE KEYS */;
 
 #
@@ -71,14 +71,14 @@ CREATE TABLE `login_teacher` (
   `pass_state` varchar(255) DEFAULT NULL,
   `pass_wrong` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "login_teacher"
 #
 
 /*!40000 ALTER TABLE `login_teacher` DISABLE KEYS */;
-INSERT INTO `login_teacher` VALUES (1,'admin','172.16.0.54','2017-12-30 13:06:21','Success',NULL),(2,'admin','172.16.0.54','2017-12-30 13:06:36','Success',NULL),(3,'admin','172.16.0.56','2017-12-30 16:27:35','Success',NULL),(4,'admin','172.16.0.80','2017-12-30 16:31:20','Success',NULL),(5,'admin','172.16.0.56','2017-12-30 22:23:17','Fail','1322'),(6,'admin','172.16.0.54','2017-12-31 19:52:34','Success',NULL),(7,'admin','172.16.0.54','2017-12-31 21:26:38','Success',NULL),(8,'admin','172.16.0.54','2017-12-31 23:01:10','Success',NULL),(9,'admin','172.16.0.54','2018-01-01 00:29:07','Success',NULL),(10,'admin','172.16.0.54','2018-01-01 19:09:41','Success',NULL),(11,'admin','172.16.0.54','2018-01-01 20:49:10','Success',NULL),(12,'admin','172.16.0.54','2018-01-01 22:21:08','Success',NULL),(13,'admin','172.16.0.54','2018-01-01 23:52:02','Fail','admin'),(14,'admin','172.16.0.54','2018-01-01 23:52:11','Success',NULL),(15,'admin','172.16.0.54','2018-01-01 23:59:40','Fail','admin'),(16,'admin','172.16.0.54','2018-01-01 23:59:50','Success',NULL),(17,'admin','172.16.0.80','2018-01-02 00:39:47','Fail','admin'),(18,'admin','172.16.0.80','2018-01-02 00:39:54','Success',NULL),(19,'admin','172.16.0.80','2018-01-02 01:10:08','Success',NULL),(20,'admin','172.16.0.54','2018-01-02 10:28:08','Fail','admin'),(21,'admin','172.16.0.54','2018-01-02 10:28:54','Success',NULL),(22,'admin','172.16.0.54','2018-01-02 14:29:50','Success',NULL),(23,'admin','172.16.0.54','2018-01-02 17:00:55','Success',NULL),(24,'admin','172.16.0.54','2018-01-02 19:45:37','Success',NULL),(25,'admin','172.16.0.54','2018-01-02 19:55:25','Success',NULL),(26,'admin','172.16.0.54','2018-01-02 20:16:14','Success',NULL),(27,'admin','172.16.0.54','2018-01-02 21:46:54','Success',NULL),(28,'admin','172.16.0.80','2018-01-02 22:26:07','Success',NULL),(29,'admin','172.16.0.54','2018-01-03 10:37:37','Success',NULL),(30,'admin','172.16.0.54','2018-01-03 12:11:46','Success',NULL),(31,'admin','172.16.0.54','2018-01-03 15:01:30','Success',NULL),(32,'admin','172.16.0.54','2018-01-03 16:31:55','Success',NULL),(36,'admin','172.16.0.54','2018-01-03 20:04:20','Success',NULL),(37,'admin','172.16.0.54','2018-01-04 08:42:13','Success',NULL),(38,'admin','172.16.0.54','2018-01-04 15:36:30','Success',NULL),(39,'admin','172.16.0.54','2018-01-04 20:41:37','Success',NULL);
+INSERT INTO `login_teacher` VALUES (1,'admin','172.16.0.54','2017-12-30 13:06:21','Success',NULL),(2,'admin','172.16.0.54','2017-12-30 13:06:36','Success',NULL),(3,'admin','172.16.0.56','2017-12-30 16:27:35','Success',NULL),(4,'admin','172.16.0.80','2017-12-30 16:31:20','Success',NULL),(5,'admin','172.16.0.56','2017-12-30 22:23:17','Fail','1322'),(6,'admin','172.16.0.54','2017-12-31 19:52:34','Success',NULL),(7,'admin','172.16.0.54','2017-12-31 21:26:38','Success',NULL),(8,'admin','172.16.0.54','2017-12-31 23:01:10','Success',NULL),(9,'admin','172.16.0.54','2018-01-01 00:29:07','Success',NULL),(10,'admin','172.16.0.54','2018-01-01 19:09:41','Success',NULL),(11,'admin','172.16.0.54','2018-01-01 20:49:10','Success',NULL),(12,'admin','172.16.0.54','2018-01-01 22:21:08','Success',NULL),(13,'admin','172.16.0.54','2018-01-01 23:52:02','Fail','admin'),(14,'admin','172.16.0.54','2018-01-01 23:52:11','Success',NULL),(15,'admin','172.16.0.54','2018-01-01 23:59:40','Fail','admin'),(16,'admin','172.16.0.54','2018-01-01 23:59:50','Success',NULL),(17,'admin','172.16.0.80','2018-01-02 00:39:47','Fail','admin'),(18,'admin','172.16.0.80','2018-01-02 00:39:54','Success',NULL),(19,'admin','172.16.0.80','2018-01-02 01:10:08','Success',NULL),(20,'admin','172.16.0.54','2018-01-02 10:28:08','Fail','admin'),(21,'admin','172.16.0.54','2018-01-02 10:28:54','Success',NULL),(22,'admin','172.16.0.54','2018-01-02 14:29:50','Success',NULL),(23,'admin','172.16.0.54','2018-01-02 17:00:55','Success',NULL),(24,'admin','172.16.0.54','2018-01-02 19:45:37','Success',NULL),(25,'admin','172.16.0.54','2018-01-02 19:55:25','Success',NULL),(26,'admin','172.16.0.54','2018-01-02 20:16:14','Success',NULL),(27,'admin','172.16.0.54','2018-01-02 21:46:54','Success',NULL),(28,'admin','172.16.0.80','2018-01-02 22:26:07','Success',NULL),(29,'admin','172.16.0.54','2018-01-03 10:37:37','Success',NULL),(30,'admin','172.16.0.54','2018-01-03 12:11:46','Success',NULL),(31,'admin','172.16.0.54','2018-01-03 15:01:30','Success',NULL),(32,'admin','172.16.0.54','2018-01-03 16:31:55','Success',NULL),(36,'admin','172.16.0.54','2018-01-03 20:04:20','Success',NULL),(37,'admin','172.16.0.54','2018-01-04 08:42:13','Success',NULL),(38,'admin','172.16.0.54','2018-01-04 15:36:30','Success',NULL),(39,'admin','172.16.0.54','2018-01-04 20:41:37','Success',NULL),(40,'admin','172.16.0.54','2018-01-05 16:42:12','Success',NULL),(41,'admin','172.16.0.54','2018-01-05 17:24:35','Success',NULL),(42,'admin','172.16.0.54','2018-01-06 08:23:30','Success',NULL),(43,'admin','172.16.0.56','2018-01-06 13:12:33','Success',NULL),(44,'admin','172.16.0.54','2018-01-06 13:51:01','Success',NULL),(45,'admin','172.16.0.54','2018-01-06 13:52:59','Success',NULL);
 /*!40000 ALTER TABLE `login_teacher` ENABLE KEYS */;
 
 #
@@ -97,7 +97,7 @@ CREATE TABLE `mail` (
   `time` varchar(255) DEFAULT NULL,
   `content` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "mail"
@@ -128,7 +128,7 @@ CREATE TABLE `sysinfo` (
 #
 
 /*!40000 ALTER TABLE `sysinfo` DISABLE KEYS */;
-INSERT INTO `sysinfo` VALUES (1,'Wechat_Server','1.0.0.4','true',NULL,'微信消息接收回复系统',NULL),(3,'FaceCheck_Server','1.0.0.2','false','人脸识别系统正在二次开发，暂时关闭使用。','人脸识别系统',NULL),(4,'Control_Server','1.0.0.2','false','控制端正在建设中...暂时无法使用。敬请期待。','微信控制后端系统',NULL),(5,'Database_Server','1.0.0.3','true',NULL,'数据库系统',NULL),(6,'Teacher_Admin_Server','1.0.0.1','true','建设中，暂停使用！','教师管理后台','2017-12-31 V3');
+INSERT INTO `sysinfo` VALUES (1,'Wechat_Server','1.0.0.4','true',NULL,'微信消息接收回复系统',NULL),(3,'FaceCheck_Server','1.0.0.2','false','人脸识别系统正在二次开发，暂时关闭使用。','人脸识别系统',NULL),(4,'Control_Server','1.0.0.2','false','控制端正在建设中...暂时无法使用。敬请期待。','微信控制后端系统',NULL),(5,'Database_Server','1.0.0.3','true',NULL,'数据库系统',NULL),(6,'Teacher_Admin_Server','Build 1.0.0.15','true','建设中，暂停使用！','教师管理后台','20180106001');
 /*!40000 ALTER TABLE `sysinfo` ENABLE KEYS */;
 
 #

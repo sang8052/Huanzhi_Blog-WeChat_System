@@ -1,4 +1,10 @@
 <!-- 侧边栏 开始 -->
+<?php
+if(!is_file("../Safe_Check.php"))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
+}
+?>
   <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
     <div class="am-offcanvas-bar admin-offcanvas-bar">
       <ul class="am-list admin-sidebar-list">

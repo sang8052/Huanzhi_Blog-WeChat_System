@@ -1,4 +1,10 @@
 <!-- 页面内容开始 -->
+<?php
+if(!is_file("../Safe_Check.php"))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
+}
+?>
   <div class="admin-content">
     <div class="admin-content-body">
       <div class="am-cf am-padding">
@@ -34,7 +40,7 @@
 			}
 			 else
 			 	{
-			 		{$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1005";} </script>';echo $echo;}
+			 		$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1005";} </script>';echo $echo;
 			 	}
 			
              ?>

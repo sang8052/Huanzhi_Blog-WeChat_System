@@ -1,3 +1,9 @@
+    <?php
+if(!is_file("../Safe_Check.php"))
+{
+	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
+}
+?>
     <!-- 版权页脚 开始 -->
     <footer class="admin-content-footer">
       <hr>
