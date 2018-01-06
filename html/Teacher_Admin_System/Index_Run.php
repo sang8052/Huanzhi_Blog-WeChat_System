@@ -23,16 +23,17 @@ require_once("Login_Check.php");
 <![endif]-->
 <!-- 网页头部 结束-->
 <?php 
+   
     require_once("html/Html_Header.php"); //加载顶部功能栏
 	echo '<div class="am-cf admin-main">';
 	require_once("html/Html_SideBar.php");//加载侧边栏
     if(!isset($_GET['Run']))  require_once("html/Html_Index.php"); //加载主页面（默认主页）
     
-    
-    else if ($_GET['Run']=='Login')   //执行登录操作
+	else if ($_GET['Run']=='Login')   //执行登录操作
 	{
-		require_once("user/Run_Login.php");
-	} 
+      require_once("user/Run_Login.php");
+	}
+    
 	
     else if ($_GET['Run']=='Login_Data')   //显示登录日志
 	{

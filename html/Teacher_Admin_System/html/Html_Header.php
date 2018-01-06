@@ -1,11 +1,10 @@
 <!-- 顶部功能栏 开始-->
+
 <?php
-if(!is_file("../Safe_Check.php"))
+if(!is_file("../../Safe_Check.php"))
 {
 	$echo='<script language="javascript">{ window.location.href="../../Echo_Error.php?error=1007";} </script>';echo $echo;
 }
-?>
-<?php
 	$sql=sprintf("select * from mail where get_username='%s' and get_read='0' and get_show='1'",$_SESSION['username']);
    $data_get=new Mysql_get($sql);
    $row=$data_get->Get_Result(); 
